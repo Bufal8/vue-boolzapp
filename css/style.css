@@ -3,3 +3,73 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Colorazione sfondo verde */
+.back-green{
+    height: 150px;
+    background-color: #207b63;
+    position: relative;
+}
+
+/* Contenitore webapp */
+.main-container{
+    margin: 0 auto;
+    position: absolute;
+    display: flex;
+    top: 5%;
+    left: 10%;
+    width: 80%;
+    height: 90%;
+}
+
+/* Left side [DEBUG]*/
+.left-side{
+    width: 30%;
+    height: 100%;
+    background-color: red;
+}
+
+.user{
+    height: 10%;
+    width: 100%;
+    background-color: blueviolet;
+    border-right: 1px solid black;
+}
+
+.notifiche{
+    height: 10%;
+    width: 100%;
+    background-color: rosybrown;
+}
+
+.search{
+    height: 5%;
+    width: 100%;
+    background-color: aquamarine;
+}
+
+/* Right side [DEBUG] */
+.right-side{
+    width: 70%;
+    height: 100%;
+    background-color: blue;
+}
+
+.active-chat-header{
+    height: 10%;
+    width: 100%;
+    background-color: snow;
+    border-left: 1px solid black;
+}
+
+.active-chat-main{
+    height: 80%;
+    width: 100%;
+    background-color: darkmagenta;
+}
+
+.active-chat-text{
+    height: 10%;
+    width: 100%;
+    background-color: springgreen;
+}
