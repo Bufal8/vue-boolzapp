@@ -17,29 +17,94 @@
     position: absolute;
     display: flex;
     top: 5%;
-    left: 10%;
-    width: 80%;
+    left: 5%;
+    width: 90%;
     height: 90%;
 }
 
 /* Left side [DEBUG]*/
 .left-side{
-    width: 30%;
+    width: 40%;
     height: 100%;
     background-color: red;
 }
 
+    /* Blocco user */
 .user{
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+
+.left-side-header{
     height: 10%;
-    width: 100%;
-    background-color: blueviolet;
+    display: flex;
+    justify-content: space-between;
+    background-color: #EAEAEA;
     border-right: 1px solid black;
 }
+
+.user-avatar{
+    width: 50px;
+    height: 50px;
+    padding-left: 5px;
+    padding-top: 2px;
+    margin-right: 5px;
+}
+
+.user-avatar img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.user-buttons{
+    padding-right: 10px;
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-buttons i{
+    color: #B1B1B1;
+    font-size: 25px;
+}
+
+.user-buttons i:hover{
+    cursor: pointer;
+}
+
+    /* Blocco notifiche */
 
 .notifiche{
     height: 10%;
     width: 100%;
-    background-color: rosybrown;
+    background-color: #8EDAFC;
+}
+
+.notifiche-flex{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.notifiche-button{
+    font-size: 25px;
+    color: #8EDAFC;
+    background-color: #F2FBFF;
+    padding: 12px 11px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.notifiche-testo p{
+    font-weight: bold;
+}
+
+.notifiche-testo u{
+    cursor: pointer;
 }
 
 .search{
@@ -50,7 +115,7 @@
 
 /* Right side [DEBUG] */
 .right-side{
-    width: 70%;
+    width: 60%;
     height: 100%;
     background-color: blue;
 }
@@ -58,7 +123,7 @@
 .active-chat-header{
     height: 10%;
     width: 100%;
-    background-color: snow;
+    background-color: #EAEAEA;
     border-left: 1px solid black;
 }
 
