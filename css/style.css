@@ -37,7 +37,7 @@
 }
 
 .left-side-header{
-    height: 10%;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     background-color: #EAEAEA;
@@ -78,7 +78,7 @@
     /* Blocco notifiche */
 
 .notifiche{
-    height: 10%;
+    height: 65px;
     width: 100%;
     background-color: #8EDAFC;
 }
@@ -107,11 +107,52 @@
     cursor: pointer;
 }
 
+    /* Blocco search */
+
+
 .search{
-    height: 5%;
+    height: 30px;
     width: 100%;
-    background-color: aquamarine;
+    background-color: #F9F9F9;
 }
+
+.search-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.search-button{
+    width: 15%;
+    padding: 5px 8px;
+    border: 1px solid #6a6a6a;
+    color: #B1B1B1;
+    text-align: center;
+    justify-self: center;
+    cursor: pointer;
+}
+
+.search-bar{
+    width: 85%;
+    border: 1px solid #6a6a6a;
+}
+
+.search-bar input{
+    width: 100%;
+    height: 100%;
+}
+
+    /* Blocco chat */
+
+.chats{
+    height: calc(100% - 155px);
+    background-color: #ffffff;
+    overflow: scroll;
+    padding: 15px;
+}
+
+
 
 /* Right side [DEBUG] */
 .right-side{
