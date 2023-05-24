@@ -29,7 +29,7 @@
 
                             <!-- Immagine utente -->
                             <div class="user-avatar">
-                                <img src="img/avatar-1.png" alt="">
+                                <img src="img/avatar_1.png" alt="">
                             </div>
 
                             <!-- Nome utente -->
@@ -91,7 +91,15 @@
 
                     <!-- Blocco messaggi -->
                     <div class="chats">
-
+                        <div @click="scegliChat(indice)" v-for="(contact, index) in contacts" :key="index" :class="chatAttiva === index ? 'active' : ''" class="user">
+                    
+                            <div class="user-avatar">
+                                <img :src= "contact.avatar" alt="">
+                            </div>
+                            <div class="user-status">
+                                <p>{{contacts.name}}</p>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
