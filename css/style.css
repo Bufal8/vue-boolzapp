@@ -152,6 +152,16 @@
     padding: 15px;
 }
 
+.chats .user{
+    margin-bottom: 5px;
+    width: 100%;
+
+}
+
+.chats .user:hover{
+    background-color: #E9EBEB;
+}
+
 
 
 /* Right side [DEBUG] */
@@ -162,20 +172,21 @@
 }
 
 .active-chat-header{
-    height: 10%;
+    height: 60px;
     width: 100%;
     background-color: #EAEAEA;
     border-left: 1px solid black;
 }
 
 .active-chat-main{
-    height: 80%;
+    height: calc(100% - 120px);
     width: 100%;
-    background-color: darkmagenta;
+    background-image: url("../img/default_bg.webp");
+    background-size: contain;
 }
 
 .active-chat-text{
-    height: 10%;
+    height: 60px;
     width: 100%;
     background-color: springgreen;
 }
