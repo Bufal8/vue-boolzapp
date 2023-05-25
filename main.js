@@ -1,4 +1,6 @@
+
 const {createApp} = Vue
+
 
 createApp({
     data(){
@@ -130,7 +132,7 @@ createApp({
                 },
                 {
                     name: 'Federico',
-                    avatar: 'img/avatar_7.png',
+                    avatar: 'img/avatar_2.png',
                     visible: true,
                     messages: [
                         {
@@ -147,7 +149,7 @@ createApp({
                 },
                 {
                     name: 'Davide',
-                    avatar: 'img/avatar_8.png',
+                    avatar: 'img/avatar_1.png',
                     visible: true,
                     messages: [
                         {
@@ -157,7 +159,7 @@ createApp({
                         },
                         {
                             date: '10/01/2020 15:50:00',
-                            message: 'No, l\'ho già mangiata ieri, ordiniamo sushi!',
+                            message: 'No, la ho già mangiata ieri, ordiniamo sushi!',
                             status: 'sent'
                         },
                         {
@@ -178,5 +180,16 @@ createApp({
           this.chatAttiva = indice;
          
         },
+
+        // Funzione creazione e invio nuovo messaggio
+        scriviMessaggio(){
+
+            // Controllo che il messaggio non sia vuoto
+            if(this.nuovoMessaggio !== ""){
+                // Aggiungi nell'array message il messaggio che hai scritto
+                this.contacts[this.chatAttiva].messages.push({message: this.nuovoMessaggio, status: 'sent', date: '10.01.2023'});
+            }
+            this.nuovoMessaggio = '';
+        }
     }
 }).mount("#app")

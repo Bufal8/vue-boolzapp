@@ -131,13 +131,17 @@
                     <!-- Blocco main chat attiva -->
                     <div class="active-chat-main">
 
+                        <div v-for="(chatAperta, index) in contacts[chatAttiva].messages" :class="chatAperta.status === 'sent' ? 'inviato' : 'ricevuto'" class="messaggio">
+                            <p>{{chatAperta.message}}</p>
+                        </div>   
+
                     </div>
 
                     <!-- Blocco invio messaggio -->
                     <div class="active-chat-text">
                         
                         <i class="fa-regular fa-face-smile"></i>
-                        <input type="text" placeholder="    Scrivi un messaggio" v-model="newMessage" @keyup.enter="aggiungiMessage">
+                        <input type="text" placeholder="    Scrivi un messaggio" v-model="nuovoMessaggio" @keyup.enter="scriviMessaggio">
                         <i class="fa-solid fa-microphone"></i>
                     
                     </div>
@@ -155,7 +159,7 @@
 
 
 
-
+    <!-- ><script src="luxon.js"></script -->
     <script type="text/javascript" src="main.js"></script>
 </body>
 </html>

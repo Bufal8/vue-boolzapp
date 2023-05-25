@@ -192,6 +192,7 @@
     width: 100%;
     background-image: url("../img/default_bg.webp");
     background-size:contain;
+    padding: 15px;
 }
 
 .active-chat-text{
@@ -213,4 +214,30 @@
 .active-chat-text i{
     font-size: 25px;
     color: #B1B1B1;
+}
+
+    /* Stile messaggi */
+
+.messaggio{
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    max-width: 50%;
+    max-height: 300px;
+    word-wrap:break-word;
+    width: fit-content;
+}
+
+.inviato{
+    background-color: #D5F9BA;
+    text-align: right;
+    position:relative;
+    top: 0;
+    left: 50%;
+}
+
+.ricevuto{
+    background-color: #fff;
+    text-align: left;
 }
