@@ -172,6 +172,8 @@ createApp({
         }
     },
     methods: {
+
+        // Seleziona la chat dal lato sinistro ed "aprila" sul lato destro assegnando alla chat attiva il valore dell'indice, selezionato cliccando in HTML
         scegliChat(indice){
           this.chatAttiva = indice;
          

@@ -162,7 +162,9 @@
     background-color: #E9EBEB;
 }
 
-
+.active{
+    background-color: #E9EBEB;
+}
 
 /* Right side [DEBUG] */
 .right-side{
@@ -176,17 +178,39 @@
     width: 100%;
     background-color: #EAEAEA;
     border-left: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.active-chat-header .user-buttons{
+    justify-content: space-evenly;
+    padding-right: 0;
 }
 
 .active-chat-main{
     height: calc(100% - 120px);
     width: 100%;
     background-image: url("../img/default_bg.webp");
-    background-size: contain;
+    background-size:contain;
 }
 
 .active-chat-text{
     height: 60px;
     width: 100%;
-    background-color: springgreen;
+    background-color:#EAEAEA;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.active-chat-text input{
+    width: 80%;
+    height: 75%;
+    border: none;
+    border-radius: 10px;
+}
+
+.active-chat-text i{
+    font-size: 25px;
+    color: #B1B1B1;
 }

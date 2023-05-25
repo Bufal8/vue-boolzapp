@@ -91,13 +91,13 @@
 
                     <!-- Blocco messaggi -->
                     <div class="chats">
-                        <div @click="scegliChat(indice)" v-for="(contact, index) in contacts" :key="index" :class="chatAttiva === index ? 'active' : ''" class="user">
+                        <div @click="scegliChat(index)" v-for="(contact, index) in contacts" :key="index" :class="chatAttiva === index ? 'active' : ''" class="user">
                     
                             <div class="user-avatar">
                                 <img :src= "contact.avatar" alt="">
                             </div>
                             <div class="user-status">
-                                <p>{{contacts.name}}</p>
+                                <p>{{contact.name}}</p>
                             </div>
                         </div>
                     </div>
@@ -109,7 +109,23 @@
 
                     <!-- Blocco header chat attiva -->
                     <div class="active-chat-header">
+                        <div class="user">
+                            
+                            <div class="user-avatar">
+                                <img :src= "contacts[chatAttiva].avatar" alt="">
+                            </div>
+                            <div class="user-status">
+                                <p>{{contacts[chatAttiva].name}}</p>
+                            </div>
 
+                        </div>
+                        <div class="user-buttons">
+
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-paperclip"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        
+                        </div>
                     </div>
 
                     <!-- Blocco main chat attiva -->
@@ -119,7 +135,11 @@
 
                     <!-- Blocco invio messaggio -->
                     <div class="active-chat-text">
-
+                        
+                        <i class="fa-regular fa-face-smile"></i>
+                        <input type="text" placeholder="    Scrivi un messaggio" v-model="newMessage" @keyup.enter="aggiungiMessage">
+                        <i class="fa-solid fa-microphone"></i>
+                    
                     </div>
 
                 </div>
