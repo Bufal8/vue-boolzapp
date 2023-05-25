@@ -186,10 +186,21 @@ createApp({
 
             // Controllo che il messaggio non sia vuoto
             if(this.nuovoMessaggio !== ""){
-                // Aggiungi nell'array message il messaggio che hai scritto
-                this.contacts[this.chatAttiva].messages.push({message: this.nuovoMessaggio, status: 'sent', date: '10.01.2023'});
+                // Aggiungi nell'array message il messaggio che hai scritto con la proprietà status: 'sent' e svuota il box nuovo messaggio
+                this.contacts[this.chatAttiva].messages.push({message: this.nuovoMessaggio, status: 'sent', date: ''});
+
+                setTimeout(this.rispostaAutomatica, 1000)
             }
             this.nuovoMessaggio = '';
+        },
+
+        // Funzione di risposta automatica 
+        rispostaAutomatica(){
+            this.contacts[this.chatAttiva].messages.push({
+                message: 'Ok',
+                status: 'received',
+                date: ''
+            });
         }
     }
 }).mount("#app")
