@@ -216,14 +216,14 @@ createApp({
 
             // se non è presente nulla nella input bar ritorna l'intero array contacts
             if(!inputSearchBar){
-                return this.contacts
+                return this.contacts;
             }
 
             // Altrimenti ritorna gli oggetti filtrati
 
-          return this.contacts.filter(chat => {
+          return this.contacts.filter(chat => 
              chat.name.toLowerCase().includes(inputSearchBar)
-          })
+          );
         }
       }
 }).mount("#app")

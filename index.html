@@ -75,13 +75,13 @@
                             
                             <div class="search-button">
 
-                                <i @click="trovaChat" class="fa-solid fa-magnifying-glass"></i>
+                                <i @click="cercaChat" class="fa-solid fa-magnifying-glass"></i>
 
                             </div>
 
                             <div class="search-bar">
 
-                                <input @keyup="trovaChat" v-model="search" type="text" placeholder="Cerca o inizia una nuova chat">
+                                <input @keyup="cercaChat" v-model="cercaChat" type="text" placeholder="Cerca o inizia una nuova chat">
 
                             </div>
                         
@@ -91,7 +91,7 @@
 
                     <!-- Blocco messaggi -->
                     <div class="chats">
-                        <div @click="scegliChat(index)" v-for="(chat, index) in filteredChatList" :key="index" :class="chatAttiva === index ? 'active' : ''" class="user">
+                        <div @click="scegliChat(index)" v-for="(contact, index) in filteredChatList" :key="index" :class="chatAttiva === index ? 'active' : ''" class="user">
                     
                             <div class="user-avatar">
                                 <img :src= "contact.avatar" alt="">
