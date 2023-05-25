@@ -6,6 +6,7 @@ createApp({
     data(){
         return{
             nuovoMessaggio: '',
+            cercaChat: '',
             chatAttiva: 0,
             contacts: [
                 {
@@ -201,6 +202,28 @@ createApp({
                 status: 'received',
                 date: ''
             });
+        },
+
+        
+    },
+    computed: {
+        
+        // Funzione ricerca chat
+        filteredChatList() {
+
+            // variabile che contiene valore di input
+            const inputSearchBar = this.cercaChat.toLowerCase();
+
+            // se non è presente nulla nella input bar ritorna l'intero array contacts
+            if(!cercaChat){
+                return this.contacts
+            }
+
+            // Altrimenti ritorna gli oggetti filtrati
+
+          return this.contacts.filter(chat => {
+            return chat.name.toLowerCase().includes(inputSearchBar)
+          })
         }
-    }
+      }
 }).mount("#app")
