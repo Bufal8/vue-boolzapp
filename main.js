@@ -11,7 +11,7 @@ createApp({
             contacts: [
                 {
                     name: 'Michele',
-                    avatar: 'img/avatar_1.png',
+                    avatar: 'img/avatar_6.jpg',
                     visible: true,
                     messages: [
                         {
@@ -33,7 +33,7 @@ createApp({
                 },
                 {
                     name: 'Fabio',
-                    avatar: 'img/avatar_2.png',
+                    avatar: 'img/avatar_7.webp',
                     visible: true,
                     messages: [
                         {
@@ -94,7 +94,7 @@ createApp({
                 },
                 {
                     name: 'Alessandro L.',
-                    avatar: 'img/avatar_5.png',
+                    avatar: 'img/avatar_8.webp',
                     visible: true,
                     messages: [
                         {
@@ -133,7 +133,7 @@ createApp({
                 },
                 {
                     name: 'Federico',
-                    avatar: 'img/avatar_2.png',
+                    avatar: 'img/avatar_9.png',
                     visible: true,
                     messages: [
                         {
@@ -203,7 +203,12 @@ createApp({
                 date: ''
             });
         },
-
+        
+        // Funzione che cancella i messaggi
+        rimuoviTask(indice){
+            // Con il metodo nativo di js 'splice' posso selezionare un elemento tramite la posizione (in questo caso indicato con l'indice) e dopo la virgola indicare quanti cancellarne (in questo caso 1)
+            this.messages.splice(indice, 1);
+        }
         
     },
     computed: {

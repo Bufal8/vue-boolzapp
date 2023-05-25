@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: #D3DBD7;
+    font-family: 'Roboto', sans-serif;
+}
+
 /* Colorazione sfondo verde */
 .back-green{
     height: 150px;
@@ -228,6 +233,10 @@
     max-height: 300px;
     word-wrap:break-word;
     width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
 }
 
 .inviato{
@@ -241,4 +250,12 @@
 .ricevuto{
     background-color: #fff;
     text-align: left;
+}
+
+.info{
+    display: none;
+}
+
+.messaggio:hover .info{
+    display: block;
 }
